@@ -47,3 +47,59 @@
 // arrayList.length = 0;
 
 // console.log(arrayList);
+
+// todo Task 3
+
+function encode(str) {
+  const obgEndcode = {
+    A: "G",
+    a: "g",
+    E: "D",
+    e: "d",
+    Y: "R",
+    y: "r",
+    O: "P",
+    o: "p",
+    U: "L",
+    u: "l",
+    I: "K",
+    i: "k",
+  };
+
+  const strInArr = str.split("");
+  //   console.log(strInArr);
+
+  const newArr = strInArr.map((element) => obgEndcode[element] || element);
+  //   console.log(newArr);
+
+  return newArr.join("");
+}
+
+console.log(decode("Ala has a cat"));
+
+function decode(str) {
+  const obgEndcode = {
+    G: "A",
+    g: "a",
+    D: "E",
+    d: "e",
+    R: "Y",
+    r: "y",
+    P: "O",
+    p: "o",
+    L: "U",
+    l: "u",
+    K: "I",
+    k: "i",
+  };
+
+  const strInArr = str.split("");
+  //   console.log(strInArr);
+
+  const newArr = strInArr.map((element) => obgEndcode[element] || element);
+  //   console.log(newArr);
+
+  return newArr.join("");
+}
+
+console.log(encode("Gug hgs g cgt"));
